@@ -3,29 +3,29 @@ import React from 'react';
 import Navbar from '../frontend/components/Navbar.js';
 import Footer from '../frontend/components/Footer.js';
 import Hero from '../frontend/components/Hero.js';
-import faqq from '../assets/faq.jpg';
-import FAQ from '../frontend/components/Faq.js';
-const Faqs = () => {
+import food from '../assets/food.jpg';
+import Menu from '../frontend/components/Menu.js';
+const Dining = () => {
   return (
     <>
       <Navbar />
       <Hero
-        cName="hero-mid"
-        heroImg={faqq}
+        cName="hero-mid-1"
+        heroImg={food}
         imgheight = "95%"
-        title="FAQs"
+        title="Dining"
         // text="Food that brings people together"
         buttonText="Book Now"
         url="/rooms"
         btnClass="hide"
       />
-      <FAQ />
+      <Menu />
       <Footer />
     </>
   );
 };
 
-export default Faqs;
+export default Dining;
 
 
 

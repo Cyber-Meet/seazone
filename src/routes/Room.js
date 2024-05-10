@@ -3,29 +3,29 @@ import React from 'react';
 import Navbar from '../frontend/components/Navbar.js';
 import Footer from '../frontend/components/Footer.js';
 import Hero from '../frontend/components/Hero.js';
-import faqq from '../assets/faq.jpg';
-import FAQ from '../frontend/components/Faq.js';
-const Faqs = () => {
+import roomhero from '../assets/rooms.jpg';
+import Rooms from '../frontend/components/Rooms.js';
+const Room = () => {
   return (
     <>
       <Navbar />
       <Hero
-        cName="hero-mid"
-        heroImg={faqq}
+        cName="hero"
+        heroImg={roomhero}
         imgheight = "95%"
-        title="FAQs"
-        // text="Food that brings people together"
+        title="Rooms"
+        text='"Room that feels like Where Elegance Meets Exceptional Comfort"'
         buttonText="Book Now"
-        url="/rooms"
-        btnClass="hide"
+        url="/booking"
+        btnClass="show"
       />
-      <FAQ />
+      <Rooms/>
       <Footer />
     </>
   );
 };
 
-export default Faqs;
+export default Room;
 
 
 
