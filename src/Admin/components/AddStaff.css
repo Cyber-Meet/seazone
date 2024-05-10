@@ -1,0 +1,54 @@
+
+.form-row {
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+
+label {
+    flex: 1;
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+form input{
+    margin-left: 1rem !important;
+}
+
+input,
+select {
+    flex: 2;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="date"] {
+    /* Additional styling for date picker input */
+    appearance: none;
+    padding-right: 20px;
+    background-size: 20px 20px;
+    /* Adjust based on your calendar icon size */
+}
+
+/* Style for error messages */
+.error-message {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+/* Optional: Add hover and focus styles for better user experience */
+input:hover,
+select:hover,
+button:hover,
+input:focus,
+select:focus,
+button:focus {
+    outline: none;
+    border-color: black;
+    box-shadow: 0 0 5px black;
+}
+

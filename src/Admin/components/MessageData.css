@@ -1,0 +1,136 @@
+.message-container {
+    display: grid !important;
+    padding: 2rem;
+    background-color: white;
+    box-shadow: 0 0 15px whitesmoke;
+    margin: 1rem;
+    border-radius: 1.5rem;
+    justify-content: normal;
+    overflow: auto;
+}
+
+.filters {
+    display: flex;
+    justify-content: space-between;
+    width: auto;
+}
+
+.filters input[type="text"] {
+    padding: 0.5rem;
+    flex: 1;
+    margin: 1rem 1rem 1rem 0;
+}
+
+.filters label {
+    display: flex;
+    flex-direction: column;
+}
+
+.filters input[type="date"] {
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.table-container {
+    margin-top: 1rem;
+    overflow: hidden;
+    /* Ensure that the border-radius is applied to the table content */
+    border-radius: .5rem;
+    /* Apply border-radius to the table container */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    /* Optional: Add a box shadow for a lifted effect */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-color: transparent;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 0.8rem;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    text-align: center !important;
+}
+
+.table-container td:last-child {
+    text-align: center;
+}
+
+tbody tr:hover {
+    background-color: #f5f5f5;
+    transition: background-color 0.3s ease-in-out;
+}
+
+button {
+    margin-left: 1rem;
+}
+
+.delete,
+.status {
+    background-color: #669494;
+    color: #001233;
+    display: inline-block;
+    padding: 0.7rem 1rem;
+    white-space: nowrap;
+    border-radius: 0.3rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    outline: 2px solid #001233;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.delete {
+    margin-left: 1rem;
+}
+
+.status {
+    margin-right: 1rem;
+}
+
+.delete:hover {
+    background-color: red;
+}
+
+.status:hover {
+    background-color: green;
+}
+
+
+@media screen and (max-width: 850px) {
+    .filters {
+        flex-direction: column;
+    }
+
+    .filters input[type="text"] {
+        margin-right: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    .filters input[type="date"] {
+        margin-top: 0.5rem;
+    }
+
+    td button {
+        display: inline-block;
+        margin-bottom: 1rem;
+
+    }
+
+    button {
+        display: inline-block;
+    }
+
+    .table-container td:last-child {
+        text-align: justify;
+    }
+
+}
