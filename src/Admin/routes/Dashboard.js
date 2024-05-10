@@ -6,20 +6,20 @@ import '../components/ADashboard.js';
 
 import Navbar from '../components/Navbar.js';
 import Footer from '../../frontend/components/Footer.js';
-import SDashboard from '../components/SDashboard.js';
+import ADashboard from '../components/ADashboard.js';
 
 
-function StaffD() {
+function Dashboard() {
 
   
   return (
     <>
       {/* Use the Logout component for the onClick event */}
       <Navbar/>
-      <SDashboard />
+      <ADashboard />
       <Footer />
     </>
   );
 }
 
-export default StaffD;
+export default Dashboard;
