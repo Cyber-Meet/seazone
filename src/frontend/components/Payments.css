@@ -1,0 +1,113 @@
+.payment-container {
+    margin: 5rem 1rem 1rem 1rem;
+    border-radius: .5rem; /* Changed to rem */
+    box-shadow: 0 0 5px whitesmoke; /* Changed to rem */
+    background-color: white;
+    width: auto;
+    display: flex;
+  }
+  
+  .left-container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    /* background: linear-gradient(45deg, #8e44ad, #e74c3c, #f39c12); */
+    border-radius: .5rem; /* Changed to rem */
+    box-shadow:0 0 10px whitesmoke; /* Changed to rem */
+    margin: 1rem;
+  }
+  
+  .right-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border-radius: .3rem; /* Changed to rem */
+    margin: 1rem;
+    box-shadow: 0 0 5px whitesmoke; /* Changed to rem */
+  }
+  
+  .reservation-details{
+    box-shadow: whitesmoke 0 0 10px;
+    background-color: white;
+    width: 98%;
+    padding: .3rem;
+    margin: 0 1rem 1rem auto;
+
+  }
+
+  .booking-details{
+    width: 95%;
+    justify-content: center;
+  }
+
+  .line{
+    width: 95%;
+    height: 1px;
+    background-color: black;
+    margin: auto;
+  }
+
+  .tax-details{
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .total-amount{
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .rvd{
+    justify-content: center;
+    text-align: left;
+  }
+  .rvd p{
+    padding: auto;
+    margin: .2rem 0 .5rem 1rem;
+  }
+
+  .payment-methods li{
+    list-style: none;
+    background-color: whitesmoke;
+    border-radius: .3rem;
+    margin: .5rem;
+    width: auto;
+    text-align: left;
+    justify-content: left;
+  }
+
+  .payment-methods p{
+    text-align: left;
+  }
+
+  .payment-methods li button{
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    margin: .5rem;
+    border-radius: .3rem;
+  }
+  .payment-methods li button:hover{
+    background-color: initial;
+    border-color: black;
+    border: 1px black solid;
+    box-shadow: initial;
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: all 0.5s ease-in-out;
+  }
+
+  .payment-methods img{
+    width: 100px;
+    height: 35px;
+    object-fit: contain;
+    padding: .2rem;
+  }
+
+  
+

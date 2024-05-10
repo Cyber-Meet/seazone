@@ -1,0 +1,90 @@
+
+.aintro{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem 2rem 2rem 2rem;
+    border-radius: .5rem;
+    box-shadow: whitesmoke 0 0 10px;
+}
+.aintro-reverse{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    margin: 2rem 2rem 2rem 2rem;
+    border-radius: .5rem;
+    box-shadow: whitesmoke 0 0 10px;
+}
+
+.aintro-text{
+    width: 45%;
+    text-align: start;
+    font-size: 1.1rem;
+    padding: 0 2rem 2rem 2rem;
+    background-color: whitesmoke;
+    border-radius: .5rem;
+    margin: 2rem 2rem 2rem 2rem;
+    min-height: 350px;
+    max-height: 350px;
+}
+
+.aintro-text h2{
+    padding: 1rem 1rem;
+    border-radius: 1rem;
+    color: #d9bf61;
+}
+
+.aimage{
+    position: relative;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem;
+    height: 375px;
+}
+
+.aimage img{
+    width: 49%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: -1px 1px 62px -18px rgba(0,0,0,0.19);
+
+}
+
+.aimage img:nth-child(2){
+    position: absolute;
+    right: 0;
+}
+
+
+
+@media screen and (max-width: 850px) {
+    
+    .aintro{
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 1.5rem 1.5rem 1.5rem 1.5rem;
+        border-radius: 2rem;
+    }
+
+    .aintro-reverse{
+        display: flex;
+        flex-direction: column-reverse;
+        margin: 1.5rem;
+        border-radius: 2rem;
+    }
+
+    .aintro-text{
+        width: 100%;
+    }
+
+    .aimage{
+        width: 100%;
+        margin: 1.8rem 1.8rem 1.8rem 1.8rem;
+    }
+
+    .aimage img{
+        height: 250px;
+    }
+}

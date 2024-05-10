@@ -1,0 +1,132 @@
+/* General styling for room-container */
+.room-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    background-color: white;
+    box-shadow: 0 0 5px whitesmoke; 
+    border-radius: .5rem;
+}
+
+/* Styling for left and right sections inside room-container */
+.left-section,
+.right-section {
+    flex: 1;
+}
+.left-section{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.features-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.features{
+    display: flex;
+    justify-content: center;
+    margin: 1rem;
+
+}
+
+.feature-item {
+    margin-bottom: 5px;
+    margin-top: 0;
+}
+
+.left-section img {
+    width: 40%;
+    height: 376px;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: -1px 1px 62px -18px rgba(0, 0, 0, 0.19);
+    margin-top: 2rem;
+    margin-bottom: auto;
+    padding: auto;
+}
+
+/* Alternate the placement of left and right sections based on index */
+.room-container:nth-child(even) .left-section {
+    order: 2;
+    /* Display left section at the right for even indices */
+}
+
+.room-container:nth-child(odd) .right-section {
+    order: 2;
+    /* Display right section at the left for odd indices */
+}
+
+.room-info-top{
+    /* border: 2px solid #001233; */
+    margin: 1.5rem;
+    min-height: 140px;
+    background-color: whitesmoke;
+    border-radius: .5rem;
+}
+.room-info-top h2{
+    text-align: center;
+    color: #d9bf61;
+    margin: .5rem;
+}
+.room-info-top p{
+    text-align: left;
+    color: black;
+    margin: .5rem 1rem 1rem 1rem;
+    padding-bottom:1rem ;
+}
+
+.room-info-mid{
+    margin: 1.5rem 1.5rem 1rem 1.5rem;
+    border-radius: 2rem;
+    min-height: 140px;
+
+}
+.room-info-mid h3{
+    text-align: center;
+    color: #001233;
+    margin: .5rem .5rem 0 .5rem;
+}
+.room-info-mid p{
+    justify-content: center;
+    text-align: center;
+    color: #001233;
+}
+
+.room-info-low{
+    display: flex;
+    justify-content: space-evenly;
+    margin: 0 1.5rem 1.5rem 1.5rem;
+    border-radius: .5rem;
+    background-color: whitesmoke;
+}
+.room-info-low p{
+    justify-content: center;
+    text-align: center;
+    color: black;
+}
+.room-info-low p:nth-child(3){
+    color: #d9bf61;
+    font-weight: bold;
+}
+
+/* Media query for screens with a width of 850 pixels or less */
+@media (max-width: 850px) {
+    .room-container {
+        flex-direction: column;
+        /* Stack items vertically */
+        align-items: center;
+        /* Center items horizontally */
+    }
+    .room-container .left-section,
+    .room-container .right-section {
+        order: 2;
+        /* Reset the order for both left and right sections on smaller screens */
+    }
+
+    /* Reset the width for left and right sections */
+    .left-section,
+    .right-section {
+        width: 100%;
+    }
+}

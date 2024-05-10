@@ -1,0 +1,86 @@
+.user-left-container{
+    display: flex;
+    justify-content: center;
+    margin: 1rem .7rem 1rem .5rem;
+    border-radius: .5rem;
+    box-shadow: 0 0 10px whitesmoke;
+    background-color: whitesmoke;
+    width: 15%;
+    padding: 1rem;
+}
+.profile-main-container{
+    margin: 6rem 1rem 1rem 1rem;
+    display: flex;
+    background-color: white;
+    justify-content: center;
+    border-radius: .5rem;
+    box-shadow: 0 0 10px whitesmoke;
+    padding: .5rem;
+}
+.user-right-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* margin: 1rem .5rem 1rem .7rem; */
+    border-radius: .5rem;
+    /* box-shadow: 0 0 10px whitesmoke; */
+    background-color: white;
+    padding: 1rem;
+    flex: 1;
+}
+.controls{
+    display: flex;
+    flex-direction: column;
+}
+.user-profile{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0 0 10px whitesmoke;
+    width: 100%;
+    border-bottom: 1px solid black;
+}
+.profile-info-1{
+    display: flex;
+    padding: .5rem;
+    justify-content:space-evenly;
+}.profile-info-2{
+    display: flex;
+    padding: .5rem;
+    justify-content:space-evenly;
+}
+.user-reservation{
+    margin: .3rem;
+    display: flex;
+    background-color: white;
+    box-shadow: 0 0 10px whitesmoke;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.user-history{
+    margin: .5rem;
+    display: flex;
+    background-color: white;
+    box-shadow: 0 0 10px whitesmoke;
+    width: 100%;
+}
+.edit-profile{
+    display: flex;
+    justify-content: space-evenly;
+    background-color: white;
+    box-shadow: 0 0 10px whitesmoke;
+    width: 100%;
+}
+.user-profile p{
+    padding: 0;
+    margin: 0;
+}
+.edit-profile form{
+    margin: 1rem 1rem 0 1rem;
+}
+.button-container-profile{
+    display: flex;
+    justify-content: space-evenly;
+}

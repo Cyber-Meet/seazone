@@ -1,0 +1,103 @@
+const handleSubmit = async (e) => {
+        e.preventDefault();
+    
+        try {
+            // Fetch available rooms
+            const roomResponse = await fetch('http://localhost:5000/api/room');
+    
+            // Check if roomResponse is successful
+            if (!roomResponse.ok) {
+                throw new Error('Failed to fetch available rooms');
+            }
+    
+            // Parse room data
+            const responseData = await roomResponse.json();
+            const roomData = responseData.rooms;
+            console.log('Room data:', roomData);
+    
+            // Check if roomData is an array
+            if (!Array.isArray(roomData)) {
+                throw new Error('Room data is not in the expected format');
+            }
+    
+            // Filter available rooms based on room type
+            const selectedRoomType = formData.roomType; // Assuming roomType is in formData
+            const availableRoomsOfType = roomData.filter(room => room.roomType === selectedRoomType && (room.available > 0 && room.available <= 100));    
+    
+            // Check if there are available rooms of the specified type
+            if (availableRoomsOfType.length === 0) {
+                console.error(`No available rooms of type: ${selectedRoomType}`);
+                return;
+            }
+    
+            // Check if room number has already been assigned for the selected room type
+            const reservationsResponse = await fetch(`http://localhost:5000/api/chreservations?roomType=${selectedRoomType}`);
+            
+            // Check if reservationsResponse is successful
+            if (!reservationsResponse.ok) {
+                throw new Error('Failed to fetch reservations');
+            }
+            
+            // Parse reservations data
+            const reservations = await reservationsResponse.json();
+    
+            // Check if room number has already been assigned for the selected room type
+            const assignedRoomNumbers = reservations.map(reservation => reservation.roomNo); // Assuming reservations is the array of reservations
+            const assignedRoom = availableRoomsOfType.find(room => !assignedRoomNumbers.includes(room.roomNo));
+    
+            if (!assignedRoom) {
+                console.error(`No available rooms with unassigned room number of type: ${selectedRoomType}`);
+                return;
+            }
+    
+            // Assign room number starting from 101
+            const roomNumber = assignedRoom.roomNo;
+    
+            // Check if selected dates are available for the selected room type
+            const checkInDate = new Date(formData.checkInDate); // Assuming checkInDate is in formData
+            const checkOutDate = new Date(formData.checkOutDate); // Assuming checkOutDate is in formData
+    
+            // Check for conflicting reservation
+            const conflictingReservation = reservations.find(reservation => {
+                const reservationCheckInDate = new Date(reservation.checkInDate);
+                const reservationCheckOutDate = new Date(reservation.checkOutDate);
+    
+                return (checkInDate < reservationCheckOutDate && checkOutDate > reservationCheckInDate);
+            });
+    
+            // If there is a conflicting reservation, log an error and return
+            if (conflictingReservation) {
+                console.error('Selected dates are not available for the specified room type');
+                return;
+            }
+    
+            // Update room API to decrement available count by 1 for the assigned room
+            await fetch(`http://localhost:5000/api/room/${assignedRoom.id}`, {
+                method: 'PATCH',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ available: assignedRoom.available - 1 }),
+            });
+    
+            // Proceed with reservation
+            const reservationResponse = await fetch('http://localhost:5000/api/reservation', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ ...formData, roomNo: roomNumber, status: 'confirmed' }),
+            });
+    
+            // Check if reservationResponse is successful
+            if (reservationResponse.ok) {
+                const responseData = await reservationResponse.json();
+                console.log('Reservation added successfully:', responseData);
+            } else {
+                console.error('Failed to add reservation:', reservationResponse.statusText);
+            }
+        } catch (error) {
+            console.error('Error handling reservation:', error.message);
+        }
+    };
+    

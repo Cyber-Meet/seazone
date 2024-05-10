@@ -1,0 +1,56 @@
+.table-container {
+    margin: 1rem;
+    overflow: auto; 
+    border-radius: .4rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.reservation{
+    margin: .3rem;
+}
+
+table {
+    width: auto;
+    border-collapse: collapse;
+    border-color: transparent;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 0.8rem;
+    text-align: left;
+}
+
+th {
+    background-color: #f3c67a;
+    text-align: center !important;
+}
+
+.table-container td:last-child {
+    text-align: center;
+}
+
+tbody tr:hover {
+    background-color: #f5f5f5;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.cncl-btn{
+    color: red;
+    border: 0;
+    outline: 0;
+    background: transparent;
+    margin: 0;
+}
+
+.cncl-btn:hover{
+     background-color: initial;
+     color: red;
+     border-color: initial;
+     box-shadow: initial;
+     cursor: pointer;
+     transition: all 0.3s ease-in-out;
+     text-shadow: red 0px 0px 10px;
+    
+}
+

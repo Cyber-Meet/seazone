@@ -1,0 +1,151 @@
+/* Global Styles */
+
+/* SignupForm Component Styles */
+.signup-form {
+  display: flex;
+  border-radius: .5rem; 
+  padding: 1.25rem;
+  /* 20px in rem */
+  box-shadow: 0 0 10px whitesmoke;
+  /* Changed to rem */
+  margin: 6rem 1rem 1rem 1rem;
+  background-color: white;
+  justify-content: center;
+}
+
+/* Left Container Styles */
+.left-signup {
+  flex: 1;
+  background-color: whitesmoke;
+  border-radius: .5rem;
+  box-shadow: 0 0 10px whitesmoke;
+  /* Changed to rem */
+  justify-content: center;
+  text-align: center;
+  justify-items: center;
+  padding: 1rem;
+  /* Adjust padding as needed */
+  margin: 0 1rem 0 0;
+
+}
+
+.password-input-container i {
+  margin: .8rem .8rem .8rem 0;
+  padding: .5rem;
+  background-color: white;
+  outline: 1px solid #001233;
+  border-radius: .2rem;
+  color: black;
+}
+
+/* Right Container Styles */
+.right-signup {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  border-radius: .5rem;
+  box-shadow: 0 0 10px whitesmoke;
+  justify-content: center;
+  text-align: center;
+  padding: 1rem;
+  /* Adjust padding as needed */
+  margin: 0 0 0 1rem;
+}
+
+/* Form Styles */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Form Input Styles */
+.signup-form .form-row {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  margin-bottom: 1rem;
+  /* 24px in rem */
+}
+
+.form-row label {
+  font-weight: bold;
+  margin: 0 1rem 0 0;
+}
+
+.form-row input,
+.form-row select {
+  flex: 1;
+  margin: 0 1rem .5rem 1rem !important;
+  padding: 0.5rem;
+  /* 8px in rem */
+  font-size: 1rem;
+  /* 16px in rem */
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+
+/* Additional styling for buttons and reset link */
+.btn-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+
+/* Error message styling */
+.error {
+  color: red;
+  margin-top: 0.5rem;
+}
+
+.our-reach ul {
+  background-color: white;
+  border-radius: .4rem;
+}
+
+.our-reach ul {
+  list-style-type: square;
+  padding-top: .4rem;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  color: #d9bf61;
+}
+.our-reach li{
+  margin: 0 1rem 1rem 1rem;
+}
+
+/* Media Query for 850px */
+@media screen and (max-width: 850px) {
+
+  /* Adjust styles for smaller screens here */
+  .signup-form {
+    flex-direction: column;
+    height: auto;
+    width: auto;
+    justify-content: center;
+    margin: 1rem;
+  }
+
+  .left-signup,
+  .right-signup {
+    margin: 1rem;
+  }
+
+  .form-row {
+    margin-bottom: 1rem;
+    /* Adjust margin for smaller screens */
+  }
+
+  form input {
+    padding: 0.4rem;
+    /* Adjust padding for smaller screens */
+    font-size: 0.9rem;
+    /* Adjust font size for smaller screens */
+  }
+
+  .btn-container {
+    flex-direction: row;
+  }
+}

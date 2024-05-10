@@ -1,0 +1,25 @@
+.hotel-booking {
+    display: flex;
+    justify-content: space-between;
+    margin: 6rem 1rem 1rem 1rem;
+    border-radius: .5rem;
+    box-shadow: white 0 0 10px;
+    background-color: whitesmoke;
+}
+
+.checkboxes {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.checkitems {
+    box-sizing: border-box;
+    padding: .2rem;
+}
+.checkitems input{
+    margin-right: .5rem !important;
+}
+
+.payment{
+    position: fixed;
+}
