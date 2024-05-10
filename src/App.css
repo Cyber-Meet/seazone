@@ -1,0 +1,151 @@
+.App {
+  text-align: center;
+}
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+/* Primary button styles */
+.button-primary {
+  background-color: #d9bf61;
+  color: black;
+  padding: 0.5rem .7rem;
+  white-space: nowrap;
+  border-radius: 0.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  outline: 1.5px solid white;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Secondary button styles */
+.button-secondary {
+  background-color: black;
+  color: white;
+  display: inline-block;
+  padding: 0.5rem .7rem;
+  white-space: nowrap;
+  border-radius: 0.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  outline: 1.5px solid white;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+/* tertiary button styles */
+.button-tertiary {
+  background-color: white;
+  color: black;
+  display: inline-block;
+  padding: 0.5rem .7rem;
+  white-space: nowrap;
+  border-radius: 0.2;
+  font-size: 1rem;
+  font-weight: 600;
+  border: none;
+  outline: 1.5px solid black;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  border-radius: .2rem;
+}
+
+.button-tertiary :first-child{
+  margin-left: 0;
+}
+
+.button-primary:hover {
+  background-color: black;
+  color: #d9bf61;
+  transition: 0.2s ease-in-out;
+  outline: 1.5px solid #d9bf61;
+}
+
+.button-secondary:hover {
+  background-color: white;
+  color: black;
+  transition: 0.2s ease-in-out;
+  outline: 1.5px solid #d9bf61;
+}
+
+.button-tertiary:hover {
+  background-color: black;
+  color: white;
+  transition: 0.2s ease-in-out;
+  outline: 1.5px solid white;
+}
+
+.main-container {
+  margin: 1rem;
+  border-radius: .5rem; /* Changed to rem */
+  box-shadow: 0 0 5px whitesmoke; /* Changed to rem */
+  background-color: white;
+  width: auto;
+}
+
+.left-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  /* background: linear-gradient(45deg, #8e44ad, #e74c3c, #f39c12); */
+  border-radius: .5rem; /* Changed to rem */
+  box-shadow:0 0 10px whitesmoke; /* Changed to rem */
+  margin: 1rem;
+}
+
+.right-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  border-radius: 1rem; /* Changed to rem */
+  margin: 1rem;
+}
+
+
+.error {
+  color: red;
+}
+
+.left-container .form-row label:first-child {
+  margin-top: 1rem;
+}
+/* Media query for screens with a width of 850 pixels or less */
+@media screen and (max-width: 850px) {
+
+  .main-container {
+    margin: 0rem 1rem 1rem 1rem !important; 
+    flex-direction: column-reverse;
+  }
+  .button-tertiary,.button-primary,.button-secondary {
+    padding: 0.6rem;
+    display: block;
+  }
+
+  .button{
+    display: block;
+  }
+
+  .left-container {
+    display: flex;
+  }
+
+  .right-container {
+      flex: 0;
+      display: block;
+    }
+}
